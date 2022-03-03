@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
 import axios, {Axios} from "axios";
-import {Header} from "semantic-ui-react";
+import {Header, List} from 'semantic-ui-react'
 
 
 function App() {
@@ -17,20 +17,21 @@ function App() {
 
 
     return (
-        <div className="App">
+        <div>
             <Header as='h2' icon='users' content='Reactivities'/>
-            <header className="App-header">
 
-                <ul>
+            <h1>First header</h1>
+                <List>
                     {activities.map((activity: any) => (
-                        <li key={activity.id}>
+                        <List.Item key={activity.id}>
                             {activity.title}
-                        </li>
+                        </List.Item>
                     ))}
-                </ul>
-            </header>
+                </List>
+
         </div>
     );
 }
 
+// @ts-ignore
 export default App;
