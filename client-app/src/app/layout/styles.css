@@ -47,6 +47,11 @@ body {
 /*.Toastify__toast-container {*/
 /*  width: 320px;*/
 /*}*/
+
+.react-datepicker-wrapper {
+    width: 100%;
+}
+
 .Toastify__toast--default {
     background: #fff;
     color: #aaa;

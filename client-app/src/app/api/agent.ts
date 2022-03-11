@@ -24,7 +24,7 @@ axios.interceptors.response.use(async response => {
             if (typeof data === "string") {
                 toast.error(data);
             }
-            if (config.method == "get" && data.errors.hasOwnProperty("id")){
+            if (config.method === "get" && data.errors.hasOwnProperty("id")){
                 history.push("/not-found");
             }
             if (data.errors) {
@@ -38,7 +38,7 @@ axios.interceptors.response.use(async response => {
             }
             break;
         case 401:
-            toast.error("unauthorized");
+            toast.error("Unauthorized");
             break;
         case 404:
             history.push("/not-found")
